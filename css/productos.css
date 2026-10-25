@@ -1,0 +1,933 @@
+/* =====================================
+   TECHZONE - PÁGINA DE PRODUCTOS
+===================================== */
+
+/* -------------------------
+   BANNER SUPERIOR
+------------------------- */
+
+#banner-productos {
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+
+.banner-principal {
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  align-items: center;
+  gap: 28px;
+
+  min-height: 470px;
+  padding: 54px 60px;
+
+  background: linear-gradient(180deg, #f4f4f4 0%, #efefef 100%);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.banner-contenido {
+  max-width: 520px;
+}
+
+.banner-etiqueta {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #9a9a9a;
+}
+
+.banner-contenido h1 {
+  margin: 0 0 22px;
+
+  font-size: clamp(3rem, 5vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.banner-contenido p {
+  max-width: 470px;
+  margin: 0 0 34px;
+
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #727272;
+}
+
+.btn-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 30px;
+  border-radius: 999px;
+
+  background-color: #111111;
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    transform var(--transicion),
+    background-color var(--transicion);
+}
+
+.btn-banner:hover {
+  background-color: #2f2f2f;
+  transform: translateY(-2px);
+}
+
+.banner-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.banner-imagen img {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* -------------------------
+   FRANJA DE CATEGORÍAS
+------------------------- */
+
+#categorias-productos {
+  margin-bottom: 70px;
+}
+
+.categorias-barra {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  background-color: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+
+  border: 1px solid #eeeeee;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.categoria-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 28px 22px;
+  min-height: 118px;
+
+  background-color: #ffffff;
+}
+
+.categoria-item:not(:last-child) {
+  border-right: 1px solid #eeeeee;
+}
+
+.categoria-item svg {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  stroke-width: 1.8;
+  color: #111111;
+}
+
+.categoria-item h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #111111;
+}
+
+.categoria-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: #7a7a7a;
+}
+
+/* =====================================
+   CATÁLOGO DE PRODUCTOS
+===================================== */
+
+#catalogo {
+  padding-top: 30px;
+}
+
+.catalogo-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.catalogo-etiqueta {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-texto-suave);
+}
+
+.catalogo-encabezado h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.catalogo-encabezado p {
+  margin: 0;
+}
+
+.total-productos {
+  color: var(--color-texto-suave);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Distribución principal con CSS Grid */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Tarjetas */
+.producto-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+  background-color: #ffffff;
+
+  transition:
+    transform var(--transicion),
+    box-shadow var(--transicion);
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Área de imagen */
+.producto-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 260px;
+  padding: 25px;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transition: transform var(--transicion);
+}
+
+.producto-card:hover .producto-imagen img {
+  transform: scale(1.05);
+}
+
+/* Información comercial */
+.producto-info {
+  padding: 20px 22px 24px;
+  background-color: #f7f7f7;
+}
+
+.producto-info span {
+  display: block;
+  margin-bottom: 8px;
+  color: #858585;
+  font-size: 0.75rem;
+}
+
+.producto-info h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.producto-info p {
+  margin: 0;
+  color: #151515;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* =====================================
+   FILTROS DEL CATÁLOGO
+===================================== */
+
+.filtros-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filtro {
+  padding: 11px 22px;
+  border: 1px solid #e5e5e5;
+  border-radius: 100px;
+
+  background-color: #f7f7f7;
+  color: #555555;
+
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transicion),
+    color var(--transicion);
+}
+
+.filtro:hover {
+  background-color: #eaeaea;
+  color: #151515;
+}
+
+.filtro.activo {
+  background-color: #151515;
+  border-color: #151515;
+  color: #ffffff;
+}
+
+/* Ocultar productos no seleccionados */
+.producto-card[hidden] {
+  display: none;
+}
+
+/* =====================================
+   AJUSTES DEL MODAL DE PRODUCTOS
+===================================== */
+
+dialog#modal-producto {
+  box-sizing: border-box;
+  width: min(92vw, 900px);
+  max-width: 900px;
+  max-height: 90dvh;
+  margin: auto;
+  padding: 30px;
+
+  border: none;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #151515;
+
+  overflow-y: auto;
+}
+
+dialog#modal-producto::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+/* Encabezado */
+#modal-producto .modal-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.modal-encabezado span {
+  font-weight: 900;
+}
+#modal-producto .cerrar-modal {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f1f1;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Imagen e información */
+#modal-producto .modal-contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+#modal-producto .modal-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+}
+
+#modal-producto .modal-imagen img {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Información */
+#modal-producto .modal-informacion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+#modal-producto #modal-categoria {
+  color: #737373;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#modal-producto #modal-nombre {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+}
+
+#modal-producto #modal-precio {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#modal-producto #modal-descripcion {
+  margin: 0;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* Especificaciones */
+#modal-producto .modal-especificaciones {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #ebebeb;
+}
+
+#modal-producto .modal-especificaciones table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#modal-producto .modal-especificaciones th,
+#modal-producto .modal-especificaciones td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ebebeb;
+}
+
+#modal-producto .modal-especificaciones th {
+  width: 40%;
+  background: #fafafa;
+}
+
+/* =====================================
+   BOTÓN VER DETALLES - CATÁLOGO
+===================================== */
+
+#catalogo .producto-card .btn-detalles {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 20px;
+
+  background-color: #151515;
+  color: #ffffff;
+
+  border: 1px solid #151515;
+  border-radius: 100px;
+
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+#catalogo .producto-card .btn-detalles:hover {
+  background-color: #383838;
+  border-color: #383838;
+  transform: translateY(-2px);
+}
+
+/* Accesibilidad con teclado */
+#catalogo .producto-card .btn-detalles:focus-visible {
+  outline: 2px solid #151515;
+  outline-offset: 3px;
+}
+
+/* Efecto al hacer clic */
+#catalogo .producto-card .btn-detalles:active {
+  transform: translateY(0);
+}
+
+/* =====================================
+   BENEFICIOS DE TECHZONE
+===================================== */
+
+#beneficios {
+  margin: 60px 0 30px;
+  padding: 65px 45px;
+
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+/* Encabezado */
+.beneficios-encabezado {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.beneficios-etiqueta {
+  display: block;
+  margin-bottom: 14px;
+
+  color: #737373;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.beneficios-encabezado h2 {
+  margin: 0 0 15px;
+
+  color: #151515;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.beneficios-encabezado p {
+  margin: 0;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* Contenedor de los beneficios */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Tarjeta de beneficio */
+.beneficio-item {
+  padding: 28px 20px;
+
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.beneficio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Íconos */
+.beneficio-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 22px;
+
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+.beneficio-icono svg {
+  width: 26px;
+  height: 26px;
+  color: #151515;
+  stroke-width: 1.7;
+}
+
+/* Textos */
+.beneficio-item h3 {
+  margin: 0 0 12px;
+  color: #151515;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.beneficio-item p {
+  margin: 0;
+  color: #737373;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   RESPONSIVE PRODUCTOS - HASTA 1200PX
+========================================== */
+
+@media (max-width: 1200px) {
+  /* Banner */
+  .banner-principal {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    min-height: 400px;
+    padding: 40px 35px;
+  }
+
+  .banner-contenido h1 {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    letter-spacing: -2px;
+  }
+
+  .banner-etiqueta {
+    letter-spacing: 4px;
+  }
+
+  /* Categorías: dos filas de tres */
+  .categorias-barra {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .categoria-item {
+    min-height: 100px;
+    padding: 22px 18px;
+    gap: 12px;
+  }
+
+  .categoria-item:nth-child(3n) {
+    border-right: none;
+  }
+
+  .categoria-item:nth-child(-n + 3) {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .categoria-item svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Catálogo */
+  .grid-productos {
+    gap: 18px;
+  }
+
+  .producto-imagen {
+    height: 230px;
+    padding: 18px;
+  }
+
+  .producto-info {
+    padding: 18px;
+  }
+
+  /* Beneficios */
+  #beneficios {
+    padding: 50px 30px;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================
+   RESPONSIVE PRODUCTOS - HASTA 768PX
+========================================== */
+@media (max-width: 1200px) {
+  #catalogo .filtros-productos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  /* Banner en una columna */
+  #banner-productos {
+    margin-top: 10px;
+  }
+
+  .banner-principal {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    min-height: auto;
+    padding: 36px 25px;
+    border-radius: 20px;
+  }
+
+  .banner-contenido {
+    max-width: 100%;
+  }
+
+  .banner-etiqueta {
+    margin-bottom: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+  .banner-contenido h1 {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  .banner-contenido p {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .btn-banner {
+    padding: 13px 24px;
+    font-size: 0.85rem;
+  }
+
+  .banner-imagen img {
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  /* Categorías: deslizamiento horizontal */
+  #categorias-productos {
+    margin-bottom: 45px;
+  }
+
+  .categorias-barra {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    border-radius: 14px;
+  }
+
+  .categorias-barra::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoria-item {
+    flex: 0 0 165px;
+    min-height: 100px;
+    padding: 18px 14px;
+
+    scroll-snap-align: start;
+    border-right: 1px solid #eeeeee;
+    border-bottom: none;
+  }
+
+  .categoria-item:nth-child(3n) {
+    border-right: 1px solid #eeeeee;
+  }
+
+  .categoria-item:nth-child(-n + 3) {
+    border-bottom: none;
+  }
+
+  .categoria-item:last-child {
+    border-right: none;
+  }
+
+  .categoria-item svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .categoria-item h3 {
+    font-size: 0.86rem;
+  }
+
+  .categoria-item p {
+    font-size: 0.74rem;
+  }
+
+  /* Catálogo */
+  .catalogo-encabezado {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .producto-imagen {
+    height: 210px;
+    padding: 16px;
+  }
+
+  .producto-info {
+    padding: 16px;
+  }
+
+  /* Filtros desplazables */
+
+  #catalogo .filtros-productos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #catalogo .filtros-productos .filtro {
+    font-size: 0.78rem;
+    padding: 10px;
+    min-height: 42px;
+  }
+
+  /* El último botón ocupa la fila completa para que no se vea raro */
+  #catalogo .filtros-productos .filtro:last-child {
+    grid-column: 2 / 3;
+  }
+
+  /* Modal */
+  dialog#modal-producto {
+    width: 94vw;
+    max-height: 90dvh;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  #modal-producto .modal-contenido {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  #modal-producto .modal-imagen {
+    min-height: 230px;
+    padding: 16px;
+  }
+
+  #modal-producto .modal-imagen img {
+    height: 220px;
+  }
+
+  #modal-producto #modal-nombre {
+    font-size: 1.7rem;
+  }
+
+  /* Beneficios */
+  #beneficios {
+    padding: 40px 20px;
+    margin-top: 45px;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .beneficios-encabezado {
+    margin-bottom: 30px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE CATÁLOGO - HASTA 600PX
+========================================== */
+
+@media (max-width: 600px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .producto-imagen {
+    height: 250px;
+  }
+
+  .producto-info {
+    padding: 20px;
+  }
+
+  .producto-info h3 {
+    font-size: 1.05rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE PRODUCTOS - HASTA 378PX
+========================================== */
+
+@media (max-width: 378px) {
+  .banner-principal {
+    padding: 30px 18px;
+  }
+
+  .banner-contenido h1 {
+    font-size: 2rem;
+    letter-spacing: -1.5px;
+  }
+
+  .banner-etiqueta {
+    letter-spacing: 2px;
+  }
+
+  .banner-imagen img {
+    max-height: 230px;
+  }
+
+  .categoria-item {
+    flex-basis: 145px;
+    padding: 14px 12px;
+  }
+
+  .producto-imagen {
+    height: 220px;
+  }
+
+  .filtro {
+    padding: 9px 14px;
+    font-size: 0.8rem;
+  }
+
+  dialog#modal-producto {
+    padding: 16px;
+  }
+
+  #modal-producto .modal-especificaciones th,
+  #modal-producto .modal-especificaciones td {
+    padding: 10px 8px;
+    font-size: 0.78rem;
+  }
+
+  #beneficios {
+    padding: 35px 15px;
+  }
+}

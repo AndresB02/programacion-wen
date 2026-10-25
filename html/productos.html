@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/productos.css" />
+    <title>TechZone - Tienda de Tecnología</title>
+  </head>
+
+  <body>
+    <div class="sitio">
+      <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+          <!-- Logo -->
+          <a href="index.html" class="logo"> TechZone </a>
+
+          <!-- Navegación principal -->
+          <nav aria-label="Navegación principal">
+            <ul class="menu">
+              <li>
+                <a href="../index.html"> Inicio </a>
+              </li>
+              <li>
+                <a href="../html/productos.html" aria-current="page"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a href="../html/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Iconos decorativos -->
+          <div class="iconos-header" aria-hidden="true">
+            <span class="icono">⌕</span>
+            <span class="icono">♧</span>
+            <span class="icono">♙</span>
+          </div>
+        </div>
+      </header>
+      <!-- Contenido principal de la página -->
+      <main class="contenedor">
+        <!-- Banner superior del catálogo -->
+        <section id="banner-productos">
+          <div class="banner-principal">
+            <div class="banner-contenido">
+              <span class="banner-etiqueta">COLECCIÓN TECHZONE</span>
+
+              <h1>EQUIPA TU<br />ESPACIO DIGITAL</h1>
+
+              <p>
+                Descubre periféricos, accesorios y dispositivos tecnológicos
+                pensados para estudiar, trabajar y disfrutar.
+              </p>
+
+              <a href="#catalogo" class="btn-banner">
+                Ver catálogo
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="banner-imagen">
+              <img
+                src="../assets/img/accesorios.png"
+                alt="Colección de periféricos y accesorios tecnológicos de TechZone"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Franja de categorías -->
+        <section id="categorias-productos">
+          <div class="categorias-barra">
+            <article class="categoria-item">
+              <i data-lucide="headphones" aria-hidden="true"></i>
+              <div>
+                <h3>Audio</h3>
+                <p>Audífonos y parlantes</p>
+              </div>
+            </article>
+
+            <article class="categoria-item">
+              <i data-lucide="keyboard" aria-hidden="true"></i>
+              <div>
+                <h3>Periféricos</h3>
+                <p>Teclados y mouse</p>
+              </div>
+            </article>
+
+            <article class="categoria-item">
+              <i data-lucide="smartphone" aria-hidden="true"></i>
+              <div>
+                <h3>Accesorios</h3>
+                <p>Para tu dispositivo</p>
+              </div>
+            </article>
+
+            <article class="categoria-item">
+              <i data-lucide="zap" aria-hidden="true"></i>
+              <div>
+                <h3>Cargadores</h3>
+                <p>Cables y adaptadores</p>
+              </div>
+            </article>
+
+            <article class="categoria-item">
+              <i data-lucide="hard-drive" aria-hidden="true"></i>
+              <div>
+                <h3>Almacenamiento</h3>
+                <p>Memorias y discos SSD</p>
+              </div>
+            </article>
+
+            <article class="categoria-item">
+              <i data-lucide="watch" aria-hidden="true"></i>
+              <div>
+                <h3>Móviles</h3>
+                <p>Smartwatch y más</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- =====================================
+     CATÁLOGO DE PRODUCTOS TECHZONE
+===================================== -->
+        <section id="catalogo">
+          <!-- Encabezado del catálogo -->
+          <div class="catalogo-encabezado">
+            <div>
+              <span class="catalogo-etiqueta"> NUESTRA SELECCIÓN </span>
+
+              <h2>Explora nuestros productos</h2>
+
+              <p>
+                Encuentra accesorios y dispositivos para complementar tu espacio
+                digital.
+              </p>
+            </div>
+
+            <span class="total-productos" aria-live="polite">
+              9 productos
+            </span>
+          </div>
+
+          <!-- Menú de filtros -->
+          <div
+            class="filtros-productos"
+            role="group"
+            aria-label="Filtrar productos por categoría"
+          >
+            <button
+              type="button"
+              class="filtro activo"
+              data-filtro="todos"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="audio"
+              aria-pressed="false"
+            >
+              Audio
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="perifericos"
+              aria-pressed="false"
+            >
+              Periféricos
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="cargadores"
+              aria-pressed="false"
+            >
+              Cargadores
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="almacenamiento"
+              aria-pressed="false"
+            >
+              Almacenamiento
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="accesorios"
+              aria-pressed="false"
+            >
+              Accesorios
+            </button>
+
+            <button
+              type="button"
+              class="filtro"
+              data-filtro="moviles"
+              aria-pressed="false"
+            >
+              Móviles
+            </button>
+          </div>
+
+          <!-- Grid de productos -->
+          <div class="grid-productos">
+            <!-- Producto 1 -->
+            <article class="producto-card" data-categoria="audio">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/audifonos.jpg"
+                  alt="Audífonos inalámbricos negros"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Audio</span>
+                <h3>Audífonos inalámbricos</h3>
+                <p>$85.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="audifonos"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="producto-card" data-categoria="perifericos">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/teclado.jpg"
+                  alt="Teclado mecánico con iluminación RGB"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Periféricos</span>
+                <h3>Teclado mecánico RGB</h3>
+                <p>$150.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="teclado"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="producto-card" data-categoria="perifericos">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/mouse.png"
+                  alt="Mouse inalámbrico para computador"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Periféricos</span>
+                <h3>Mouse inalámbrico</h3>
+                <p>$65.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="mouse"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="producto-card" data-categoria="audio">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/parlante.png"
+                  alt="Parlante Bluetooth portátil"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Audio</span>
+                <h3>Parlante Bluetooth</h3>
+                <p>$120.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="parlante"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 5 -->
+            <article class="producto-card" data-categoria="cargadores">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/cargador.png"
+                  alt="Cargador USB-C compacto"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Cargadores</span>
+                <h3>Cargador USB-C</h3>
+                <p>$45.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="cargador"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 6 -->
+            <article class="producto-card" data-categoria="almacenamiento">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/usb.png"
+                  alt="Memoria USB de 64 GB"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Almacenamiento</span>
+                <h3>Memoria USB 64 GB</h3>
+                <p>$38.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="memoria-usb"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 7 -->
+            <article class="producto-card" data-categoria="moviles">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/reloj.png"
+                  alt="Reloj inteligente de color negro"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Móviles</span>
+                <h3>Smartwatch</h3>
+                <p>$180.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="smartwatch"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 8 -->
+            <article class="producto-card" data-categoria="accesorios">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/soporte.png"
+                  alt="Soporte ajustable para computador portátil"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Accesorios</span>
+                <h3>Soporte para portátil</h3>
+                <p>$72.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="soporte-portatil"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+
+            <!-- Producto 9 -->
+            <article class="producto-card" data-categoria="almacenamiento">
+              <div class="producto-imagen">
+                <img
+                  src="../assets/img/ssd.png"
+                  alt="Unidad SSD externa de 500 GB"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="producto-info">
+                <span>Almacenamiento</span>
+                <h3>SSD externo 500 GB</h3>
+                <p>$210.000</p>
+                <button
+                  type="button"
+                  class="btn-detalles"
+                  data-producto="ssd-externo"
+                  aria-haspopup="dialog"
+                >
+                  Ver detalles
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- =====================================
+     BENEFICIOS DE TECHZONE
+===================================== -->
+        <section id="beneficios">
+          <div class="beneficios-encabezado">
+            <span class="beneficios-etiqueta"> NUESTRA PROPUESTA </span>
+
+            <h2>¿Por qué elegir TechZone?</h2>
+
+            <p>
+              Una manera sencilla de descubrir, explorar y conocer los
+              accesorios tecnológicos que necesitas.
+            </p>
+          </div>
+
+          <div class="beneficios-grid">
+            <!-- Beneficio 1 -->
+            <article class="beneficio-item">
+              <div class="beneficio-icono">
+                <i data-lucide="shield-check" aria-hidden="true"></i>
+              </div>
+
+              <h3>Calidad</h3>
+
+              <p>
+                Una selección de accesorios pensados para acompañarte en tu día
+                a día.
+              </p>
+            </article>
+
+            <!-- Beneficio 2 -->
+            <article class="beneficio-item">
+              <div class="beneficio-icono">
+                <i data-lucide="layout-grid" aria-hidden="true"></i>
+              </div>
+
+              <h3>Variedad</h3>
+
+              <p>
+                Diferentes categorías para explorar dispositivos y accesorios
+                tecnológicos.
+              </p>
+            </article>
+
+            <!-- Beneficio 3 -->
+            <article class="beneficio-item">
+              <div class="beneficio-icono">
+                <i data-lucide="message-circle" aria-hidden="true"></i>
+              </div>
+
+              <h3>Información clara</h3>
+
+              <p>
+                Consulta las características y especificaciones de cada
+                producto.
+              </p>
+            </article>
+
+            <!-- Beneficio 4 -->
+            <article class="beneficio-item">
+              <div class="beneficio-icono">
+                <i data-lucide="search-check" aria-hidden="true"></i>
+              </div>
+
+              <h3>Exploración fácil</h3>
+
+              <p>
+                Encuentra productos por categoría gracias a nuestros filtros
+                interactivos.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- =====================================
+     MODAL DE DETALLES DEL PRODUCTO
+===================================== -->
+
+      <dialog
+        id="modal-producto"
+        class="modal-producto"
+        aria-labelledby="modal-nombre"
+      >
+        <!-- Encabezado del modal -->
+        <div class="modal-encabezado">
+          <span>DETALLES DEL PRODUCTO</span>
+
+          <button
+            type="button"
+            class="cerrar-modal"
+            aria-label="Cerrar detalles del producto"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="modal-contenido">
+          <!-- Imagen -->
+          <div class="modal-imagen">
+            <img
+              id="modal-imagen"
+              src="../assets/img/audifonos.jpg"
+              alt="Audífonos inalámbricos"
+            />
+          </div>
+
+          <!-- Información -->
+          <div class="modal-informacion">
+            <span id="modal-categoria"> Audio </span>
+
+            <h2 id="modal-nombre">Audífonos inalámbricos</h2>
+
+            <p id="modal-precio">$85.000</p>
+
+            <p id="modal-descripcion">
+              Audífonos inalámbricos diseñados para disfrutar de una experiencia
+              de audio cómoda y práctica.
+            </p>
+          </div>
+        </div>
+
+        <!-- Especificaciones técnicas -->
+        <div class="modal-especificaciones">
+          <h3>Especificaciones técnicas</h3>
+
+          <table>
+            <tbody id="modal-tabla">
+              <tr>
+                <th scope="row">Conectividad</th>
+                <td>Bluetooth</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Color</th>
+                <td>Negro</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Tipo</th>
+                <td>Audífonos inalámbricos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </dialog>
+
+      <!-- Pie de página -->
+      <footer>
+        <p>TechZone - Proyecto académico de Programación Web</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

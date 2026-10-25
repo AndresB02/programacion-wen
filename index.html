@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+
+    <title>TechZone - Tienda de Tecnología</title>
+  </head>
+
+  <body>
+    <div class="sitio">
+      <!-- Encabezado principal -->
+      <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+          <!-- Logo -->
+          <a href="index.html" class="logo"> TechZone </a>
+
+          <!-- Navegación principal -->
+          <nav aria-label="Navegación principal">
+            <ul class="menu">
+              <li>
+                <a href="index.html" aria-current="page"> Inicio </a>
+              </li>
+              <li>
+                <a href="./html/productos.html">Productos</a>
+              </li>
+              <li>
+                <a href="./html/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Iconos decorativos -->
+          <div class="iconos-header" aria-hidden="true">
+            <span class="icono">⌕</span>
+            <span class="icono">♧</span>
+            <span class="icono">♙</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Contenido principal de la página -->
+
+      <main class="contenedor">
+        <!-- Sección de presentación -->
+
+        <!-- Hero principal de TechZone -->
+        <section id="inicio" class="hero">
+          <div class="hero-contenido">
+            <span class="hero-etiqueta"> BIENVENIDO A TECHZONE </span>
+
+            <h1>TECNOLOGÍA QUE TRANSFORMA TU DÍA</h1>
+
+            <p>
+              Descubre periféricos y accesorios diseñados para mejorar tu
+              experiencia digital. Innovación, estilo y comodidad en un solo
+              lugar.
+            </p>
+
+            <a href="./html/productos.html" class="btn-primario">
+              Explorar productos
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="hero-imagen">
+            <img
+              src="assets/img/audifonos1.jpg"
+              alt="Audífonos inalámbricos destacados de TechZone"
+              width="550"
+              height="550"
+            />
+          </div>
+        </section>
+
+        <!-- Sección informativa -->
+        <section id="nosotros">
+          <h2>¿Quiénes somos?</h2>
+
+          <p>
+            Somos una tienda de tecnología enfocada en ofrecer accesorios y
+            dispositivos prácticos, modernos y accesibles para nuestros
+            clientes.
+          </p>
+        </section>
+        <!-- Sección de categorías -->
+        <section id="categorias">
+          <h2>Nuestras categorías</h2>
+
+          <ul>
+            <li>Audífonos y dispositivos de audio</li>
+            <li>Teclados y mouse</li>
+            <li>Accesorios para computadores</li>
+            <li>Cargadores y cables</li>
+            <li>Dispositivos de almacenamiento</li>
+          </ul>
+        </section>
+
+        <!-- Sección de productos destacados -->
+        <section id="destacados">
+          <h2>Productos destacados</h2>
+
+          <p>
+            Conoce algunos de los productos que encontrarás en nuestra tienda.
+          </p>
+
+          <div class="productos-destacados">
+            <figure>
+              <img
+                src="./assets/img/audifonos.jpg"
+                alt="Audífonos inalámbricos de color negro"
+                width="250"
+              />
+              <figcaption>Audífonos inalámbricos</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="./assets/img/teclado.jpg"
+                alt="Teclado mecánico con iluminación RGB"
+                width="250"
+              />
+              <figcaption>Teclado mecánico RGB</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Sección de comparación de productos -->
+        <section id="comparativa">
+          <h2>Comparativa de productos</h2>
+
+          <p>
+            Consulta algunos de nuestros productos, sus categorías y precios de
+            referencia.
+          </p>
+
+          <table>
+            <caption>
+              Precios de productos TechZone (COP)
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Audífonos inalámbricos</td>
+                <td>Audio</td>
+                <td>$85.000</td>
+              </tr>
+
+              <tr>
+                <td>Teclado mecánico RGB</td>
+                <td>Periféricos</td>
+                <td>$150.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="video">
+          <h2>Conoce más sobre TechZone</h2>
+          <p>
+            Descubre la variedad de periféricos, accesorios y productos
+            tecnológicos que tenemos para ti.
+          </p>
+
+          <video controls width="560">
+            <source
+              src="./assets/video/techzone_video_promocional.mp4"
+              type="video/mp4"
+            />
+            Tu navegador no soporta la reproducción de video en HTML5.
+          </video>
+        </section>
+      </main>
+
+      <!-- Pie de página -->
+      <footer>
+        <p>TechZone - Proyecto académico de Programación Web</p>
+      </footer>
+    </div>
+  </body>
+</html>
