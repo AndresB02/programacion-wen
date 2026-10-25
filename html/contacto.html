@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/contacto.css" />
+    <title>TechZone - Tienda de Tecnología</title>
+  </head>
+
+  <body>
+    <div class="sitio">
+      <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+          <!-- Logo -->
+          <a href="index.html" class="logo"> TechZone </a>
+
+          <!-- Navegación principal -->
+          <nav aria-label="Navegación principal">
+            <ul class="menu">
+              <li>
+                <a href="../index.html"> Inicio </a>
+              </li>
+              <li>
+                <a href="../html/productos.html">Productos</a>
+              </li>
+              <li>
+                <a href="../html/contacto.html" aria-current="page">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Iconos decorativos -->
+          <div class="iconos-header" aria-hidden="true">
+            <span class="icono">⌕</span>
+            <span class="icono">♧</span>
+            <span class="icono">♙</span>
+          </div>
+        </div>
+      </header>
+      <!-- Contenido principal de la página -->
+      <!-- CONTENIDO PRINCIPAL -->
+      <main class="contenedor">
+        <!-- =====================================
+      BANNER SUPERIOR - CONTACTO
+      ===================================== -->
+
+        <section id="hero-contacto">
+          <div class="banner-contacto">
+            <!-- Contenido textual -->
+            <div class="banner-contacto-contenido">
+              <span class="contacto-etiqueta"> CONECTEMOS </span>
+
+              <h1>ESTAMOS AQUÍ PARA AYUDARTE.</h1>
+
+              <p>
+                ¿Tienes alguna pregunta sobre nuestros productos o necesitas más
+                información? En TechZone estamos para ayudarte.
+              </p>
+
+              <a href="#contacto-principal" class="btn-contacto">
+                Escríbenos
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <!-- Imagen ilustrativa -->
+            <div class="banner-contacto-imagen">
+              <img
+                src="../assets/img/contacto.png"
+                alt="Ilustración de atención al cliente con auriculares y mensaje"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================
+     FRANJA DE ORIENTACIÓN
+===================================== -->
+
+        <section id="orientacion-contacto">
+          <div class="orientacion-titulo">
+            <span>¿EN QUÉ PODEMOS AYUDARTE?</span>
+          </div>
+
+          <div class="orientacion-grid">
+            <!-- Opción 1 -->
+            <article class="orientacion-item">
+              <i data-lucide="headphones" aria-hidden="true"></i>
+
+              <h3>Productos</h3>
+
+              <p>Resuelve tus dudas sobre nuestros accesorios tecnológicos.</p>
+            </article>
+
+            <!-- Opción 2 -->
+            <article class="orientacion-item">
+              <i data-lucide="monitor-smartphone" aria-hidden="true"></i>
+
+              <h3>Compatibilidad</h3>
+
+              <p>
+                Consulta qué accesorios son adecuados para tus dispositivos.
+              </p>
+            </article>
+
+            <!-- Opción 3 -->
+            <article class="orientacion-item">
+              <i data-lucide="messages-square" aria-hidden="true"></i>
+
+              <h3>Consultas generales</h3>
+
+              <p>Encuentra información y orientación sobre TechZone.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- =====================================
+     FORMULARIO DE CONTACTO
+===================================== -->
+
+        <section id="contacto-principal">
+          <!-- Formulario -->
+          <div class="contacto-formulario">
+            <div class="formulario-encabezado">
+              <span class="formulario-etiqueta"> ESCRÍBENOS </span>
+
+              <h2>Envíanos un mensaje</h2>
+
+              <p>Completa el formulario y cuéntanos en qué podemos ayudarte.</p>
+            </div>
+
+            <form id="formulario-contacto">
+              <!-- Nombre -->
+              <div class="campo-formulario">
+                <label for="nombre">Nombre completo</label>
+
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Escribe tu nombre completo"
+                  autocomplete="name"
+                  minlength="3"
+                  maxlength="60"
+                  pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s'-]+"
+                  title="Ingresa solamente letras, espacios, apóstrofes o guiones."
+                  required
+                />
+
+                <small class="mensaje-error" id="error-nombre"></small>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="campo-formulario">
+                <label for="correo">Correo electrónico</label>
+
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="tunombre@correo.com"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                />
+
+                <small class="mensaje-error" id="error-correo"></small>
+              </div>
+
+              <!-- Asunto -->
+              <div class="campo-formulario">
+                <label for="asunto">Asunto</label>
+
+                <select id="asunto" name="asunto" required>
+                  <option value="" selected disabled>
+                    Selecciona el motivo de tu consulta
+                  </option>
+
+                  <option value="productos">Consulta sobre productos</option>
+
+                  <option value="compatibilidad">
+                    Compatibilidad de accesorios
+                  </option>
+
+                  <option value="general">Información general</option>
+                </select>
+              </div>
+
+              <!-- Mensaje -->
+              <div class="campo-formulario">
+                <label for="mensaje">Mensaje</label>
+
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  minlength="15"
+                  maxlength="500"
+                  placeholder="Cuéntanos en qué podemos ayudarte..."
+                  aria-describedby="contador-mensaje error-mensaje"
+                  required
+                ></textarea>
+
+                <div class="mensaje-ayuda">
+                  <small class="mensaje-error" id="error-mensaje"></small>
+                  <small id="contador-mensaje">0 / 500 caracteres</small>
+                </div>
+              </div>
+
+              <!-- Botón de envío -->
+              <button type="submit" class="btn-enviar">
+                Enviar mensaje
+                <span aria-hidden="true">→</span>
+              </button>
+
+              <!-- Mensaje de respuesta -->
+              <p id="respuesta-formulario" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Información lateral -->
+          <aside class="contacto-informacion">
+            <span class="informacion-etiqueta"> CANALES DE ATENCIÓN </span>
+
+            <h2>Estamos para ayudarte.</h2>
+
+            <p class="informacion-descripcion">
+              Conoce nuestras opciones de contacto y encuentra la información
+              que necesitas sobre nuestros accesorios tecnológicos.
+            </p>
+
+            <div class="contacto-datos">
+              <!-- Correo -->
+              <div class="contacto-dato">
+                <i data-lucide="mail" aria-hidden="true"></i>
+
+                <div>
+                  <h3>Correo electrónico</h3>
+                  <p>contacto@techzone.example</p>
+                </div>
+              </div>
+
+              <!-- Horario -->
+              <div class="contacto-dato">
+                <i data-lucide="clock" aria-hidden="true"></i>
+
+                <div>
+                  <h3>Horario de atención</h3>
+                  <p>Lunes a viernes</p>
+                  <p>8:00 am a 5:00pm</p>
+                </div>
+              </div>
+
+              <!-- Consultas -->
+              <div class="contacto-dato">
+                <i data-lucide="message-circle" aria-hidden="true"></i>
+
+                <div>
+                  <h3>Consultas generales</h3>
+                  <p>Productos y accesorios tecnológicos</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacto-nota">
+              <i data-lucide="info" aria-hidden="true"></i>
+
+              <p>
+                TechZone es una tienda ficticia desarrollada como proyecto
+                académico.
+              </p>
+            </div>
+          </aside>
+        </section>
+      </main>
+
+      <!-- =====================================
+     MODAL DE CONFIRMACIÓN
+===================================== -->
+
+      <dialog
+        id="modal-confirmacion"
+        class="modal-confirmacion"
+        aria-labelledby="confirmacion-titulo"
+        aria-describedby="confirmacion-descripcion"
+      >
+        <div class="confirmacion-contenido">
+          <div class="confirmacion-icono">
+            <i data-lucide="check-circle-2" aria-hidden="true"></i>
+          </div>
+
+          <h2 id="confirmacion-titulo">¡Mensaje preparado!</h2>
+
+          <p id="confirmacion-descripcion">
+            Tu formulario se ha validado correctamente. Esta es una demostración
+            académica; no se ha enviado ningún correo real.
+          </p>
+
+          <button
+            type="button"
+            id="cerrar-confirmacion"
+            class="btn-confirmacion"
+          >
+            Entendido
+          </button>
+        </div>
+      </dialog>
+      <!-- Pie de página -->
+      <footer>
+        <p>TechZone - Proyecto académico de Programación Web</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

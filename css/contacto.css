@@ -1,0 +1,874 @@
+/* ==========================================
+   TECHZONE - PÁGINA DE CONTACTO
+   Diseño Minimal Tech
+========================================== */
+
+/* ==========================================
+   BANNER SUPERIOR
+========================================== */
+
+#hero-contacto {
+  margin-top: 24px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor principal del banner */
+.banner-contacto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+
+  min-height: 440px;
+  padding: 55px 60px;
+
+  background: linear-gradient(180deg, #f4f4f4 0%, #efefef 100%);
+
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+/* ==========================================
+   CONTENIDO DEL BANNER
+========================================== */
+
+.banner-contacto-contenido {
+  max-width: 530px;
+  min-width: 0;
+}
+
+/* Etiqueta superior */
+.contacto-etiqueta {
+  display: block;
+  margin-bottom: 22px;
+
+  color: #929292;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+/* Título principal */
+.banner-contacto-contenido h1 {
+  margin: 0 0 22px;
+
+  color: #111111;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+/* Descripción */
+.banner-contacto-contenido p {
+  max-width: 450px;
+  margin: 0 0 32px;
+
+  color: #727272;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   BOTÓN DEL BANNER
+========================================== */
+
+.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 15px 28px;
+
+  background-color: #151515;
+  color: #ffffff;
+
+  border-radius: 100px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color var(--transicion),
+    transform var(--transicion);
+}
+
+.btn-contacto:hover {
+  background-color: #383838;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-contacto:focus-visible {
+  outline: 2px solid #151515;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   IMAGEN DEL BANNER
+========================================== */
+
+.banner-contacto-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.banner-contacto-imagen img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =====================================
+   FRANJA DE ORIENTACIÓN - CONTACTO
+===================================== */
+
+#orientacion-contacto {
+  margin: 0 0 70px;
+  padding: 15px 0;
+}
+
+/* Título con separadores */
+.orientacion-titulo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 35px;
+}
+
+.orientacion-titulo::before,
+.orientacion-titulo::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.orientacion-titulo span {
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Distribución de tres columnas */
+.orientacion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+/* Cada bloque */
+.orientacion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 28px;
+  text-align: center;
+}
+
+/* Separación vertical entre bloques */
+.orientacion-item + .orientacion-item {
+  border-left: 1px solid #eeeeee;
+}
+
+/* Íconos */
+.orientacion-item svg {
+  width: 32px;
+  height: 32px;
+
+  margin-bottom: 18px;
+
+  color: #151515;
+  stroke-width: 1.6;
+}
+
+/* Títulos */
+.orientacion-item h3 {
+  margin: 0 0 8px;
+
+  color: #151515;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Descripciones */
+.orientacion-item p {
+  max-width: 270px;
+  margin: 0;
+
+  color: #737373;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* =====================================
+   FORMULARIO E INFORMACIÓN DE CONTACTO
+===================================== */
+
+#contacto-principal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  gap: 28px;
+
+  margin-bottom: 70px;
+}
+
+/* =====================================
+   COLUMNA DEL FORMULARIO
+===================================== */
+
+.contacto-formulario {
+  padding: 38px;
+
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+}
+
+.formulario-encabezado {
+  margin-bottom: 30px;
+}
+
+.formulario-etiqueta,
+.informacion-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.formulario-encabezado h2,
+.contacto-informacion h2 {
+  margin: 0 0 12px;
+
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #151515;
+  line-height: 1.2;
+}
+
+.formulario-encabezado p {
+  margin: 0;
+  color: #737373;
+}
+
+/* Organización de campos */
+#formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.campo-formulario label {
+  color: #151515;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Campos de entrada */
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  min-width: 0;
+
+  padding: 15px 16px;
+
+  background-color: #f7f7f7;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+
+  color: #151515;
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  outline: none;
+
+  transition:
+    border-color var(--transicion),
+    background-color var(--transicion);
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+  color: #a0a0a0;
+}
+
+/* Estado seleccionado */
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+  background-color: #ffffff;
+  border-color: #151515;
+}
+
+.campo-formulario select {
+  cursor: pointer;
+}
+
+/* =====================================
+   BOTÓN ENVIAR
+===================================== */
+
+.btn-enviar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 100%;
+  padding: 15px 24px;
+
+  background-color: #151515;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 100px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transicion),
+    transform var(--transicion);
+}
+
+.btn-enviar:hover {
+  background-color: #383838;
+  transform: translateY(-2px);
+}
+
+.btn-enviar:active {
+  transform: translateY(0);
+}
+
+/* Espacio para la respuesta del formulario */
+#respuesta-formulario {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #737373;
+}
+
+#respuesta-formulario:empty {
+  display: none;
+}
+
+/* =====================================
+   COLUMNA DE INFORMACIÓN
+===================================== */
+
+.contacto-informacion {
+  display: flex;
+  flex-direction: column;
+
+  padding: 38px;
+
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.informacion-descripcion {
+  margin: 0 0 35px;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* Lista de datos */
+.contacto-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacto-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contacto-dato > svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+
+  color: #151515;
+  stroke-width: 1.7;
+}
+
+.contacto-dato h3 {
+  margin: 0 0 5px;
+  color: #151515;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contacto-dato p {
+  margin: 0;
+  color: #737373;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+/* Nota académica */
+.contacto-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: auto;
+  padding-top: 35px;
+}
+
+.contacto-nota svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  color: #737373;
+}
+
+.contacto-nota p {
+  margin: 0;
+  color: #888888;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* =====================================
+   MODAL DE CONFIRMACIÓN
+===================================== */
+
+dialog#modal-confirmacion {
+  width: min(90vw, 440px);
+  max-height: 90dvh;
+  margin: auto;
+  padding: 35px 30px;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 22px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+
+dialog#modal-confirmacion::backdrop {
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.confirmacion-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.confirmacion-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  background-color: #f0f7f2;
+  border-radius: 50%;
+}
+
+.confirmacion-icono svg {
+  width: 38px;
+  height: 38px;
+  color: #267347;
+  stroke-width: 1.8;
+}
+
+.confirmacion-contenido h2 {
+  margin: 0;
+  color: #151515;
+  font-size: 1.6rem;
+}
+
+.confirmacion-contenido p {
+  margin: 0;
+  color: #737373;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.btn-confirmacion {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 22px;
+
+  background-color: #151515;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 100px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background-color var(--transicion);
+}
+
+.btn-confirmacion:hover {
+  background-color: #383838;
+}
+
+/* ==========================================
+   TECHZONE - CONTACTO RESPONSIVE
+   TABLETS Y PORTÁTILES: HASTA 1200PX
+========================================== */
+
+@media (max-width: 1200px) {
+  /* BANNER */
+  .banner-contacto {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    min-height: 400px;
+    padding: 42px 35px;
+  }
+
+  .banner-contacto-contenido h1 {
+    font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+    letter-spacing: -2px;
+  }
+
+  .contacto-etiqueta {
+    letter-spacing: 4px;
+  }
+
+  /* FRANJA DE ORIENTACIÓN */
+  .orientacion-item {
+    padding: 18px 16px;
+  }
+
+  .orientacion-grid {
+    gap: 0;
+  }
+
+  /* FORMULARIO E INFORMACIÓN */
+  #contacto-principal {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 20px;
+  }
+
+  .contacto-formulario,
+  .contacto-informacion {
+    padding: 28px;
+  }
+
+  .contacto-dato {
+    gap: 12px;
+  }
+
+  .contacto-datos {
+    gap: 25px;
+  }
+}
+
+/* ==========================================
+   TECHZONE - CONTACTO RESPONSIVE
+   TABLETS PEQUEÑAS Y MÓVILES: HASTA 768PX
+========================================== */
+
+@media (max-width: 768px) {
+  /* =====================================
+       BANNER SUPERIOR
+    ===================================== */
+
+  #hero-contacto {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  .banner-contacto {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    min-height: auto;
+    padding: 36px 25px;
+
+    border-radius: 20px;
+  }
+
+  .banner-contacto-contenido {
+    max-width: 100%;
+  }
+
+  .contacto-etiqueta {
+    margin-bottom: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+  .banner-contacto-contenido h1 {
+    font-size: clamp(2.1rem, 7vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+  }
+
+  .banner-contacto-contenido p {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+  }
+
+  .btn-contacto {
+    padding: 13px 24px;
+    font-size: 0.85rem;
+  }
+
+  .banner-contacto-imagen {
+    width: 100%;
+  }
+
+  .banner-contacto-imagen img {
+    max-width: 400px;
+    max-height: 280px;
+    object-fit: contain;
+  }
+
+  /* =====================================
+       FRANJA DE ORIENTACIÓN
+    ===================================== */
+
+  #orientacion-contacto {
+    margin-bottom: 45px;
+    padding: 0;
+  }
+
+  .orientacion-titulo {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .orientacion-titulo span {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .orientacion-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .orientacion-item {
+    padding: 22px 15px;
+  }
+
+  /* Separadores horizontales */
+  .orientacion-item + .orientacion-item {
+    border-left: none;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .orientacion-item svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 12px;
+  }
+
+  .orientacion-item p {
+    max-width: 320px;
+  }
+
+  /* =====================================
+       FORMULARIO E INFORMACIÓN
+    ===================================== */
+
+  #contacto-principal {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+
+  .contacto-formulario,
+  .contacto-informacion {
+    min-width: 0;
+    padding: 25px 20px;
+    border-radius: 18px;
+  }
+
+  .formulario-encabezado {
+    margin-bottom: 25px;
+  }
+
+  .formulario-encabezado h2,
+  .contacto-informacion h2 {
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+  }
+
+  #formulario-contacto {
+    gap: 18px;
+  }
+
+  .campo-formulario input,
+  .campo-formulario select,
+  .campo-formulario textarea {
+    padding: 14px;
+  }
+
+  .campo-formulario textarea {
+    min-height: 130px;
+  }
+
+  .contacto-datos {
+    gap: 25px;
+  }
+
+  .contacto-nota {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  /* =====================================
+       MODAL DE CONFIRMACIÓN
+    ===================================== */
+
+  dialog#modal-confirmacion {
+    width: min(92vw, 440px);
+    padding: 30px 25px;
+    border-radius: 18px;
+  }
+
+  .confirmacion-icono {
+    width: 62px;
+    height: 62px;
+  }
+
+  .confirmacion-icono svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .confirmacion-contenido h2 {
+    font-size: 1.45rem;
+  }
+
+  .confirmacion-contenido p {
+    font-size: 0.88rem;
+  }
+}
+
+/* ==========================================
+   TECHZONE - CONTACTO RESPONSIVE
+   CELULARES ESTRECHOS: HASTA 378PX
+========================================== */
+
+@media (max-width: 378px) {
+  /* BANNER */
+  .banner-contacto {
+    padding: 30px 18px;
+    gap: 20px;
+  }
+
+  .banner-contacto-contenido h1 {
+    font-size: 1.9rem;
+    letter-spacing: -1.3px;
+    overflow-wrap: break-word;
+  }
+
+  .contacto-etiqueta {
+    letter-spacing: 2px;
+  }
+
+  .banner-contacto-imagen img {
+    max-height: 230px;
+  }
+
+  /* FRANJA */
+  .orientacion-titulo span {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .orientacion-item {
+    padding: 18px 10px;
+  }
+
+  /* FORMULARIO */
+  .contacto-formulario,
+  .contacto-informacion {
+    padding: 22px 16px;
+  }
+
+  .formulario-etiqueta,
+  .informacion-etiqueta {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+  }
+
+  .campo-formulario input,
+  .campo-formulario select,
+  .campo-formulario textarea {
+    padding: 13px 12px;
+    font-size: 0.85rem;
+  }
+
+  .btn-enviar {
+    padding: 13px 18px;
+    font-size: 0.85rem;
+  }
+
+  .contacto-dato {
+    gap: 10px;
+  }
+
+  .contacto-dato p {
+    font-size: 0.8rem;
+  }
+
+  /* MODAL */
+  dialog#modal-confirmacion {
+    width: 94vw;
+    padding: 28px 18px;
+  }
+
+  .confirmacion-contenido {
+    gap: 14px;
+  }
+
+  .confirmacion-contenido h2 {
+    font-size: 1.3rem;
+  }
+
+  .confirmacion-contenido p {
+    font-size: 0.85rem;
+  }
+}
